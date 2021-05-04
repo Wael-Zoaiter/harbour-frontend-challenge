@@ -1,9 +1,9 @@
 import { ThemeProvider } from 'styled-components';
 
-import ScholarshipDetails from "@pages/ScholarshipDetails";
-import NormalizeStyle from '@styles/Normalize';
-import GlobalStyle from '@styles/Global';
-import theme from '@theme';
+import NormalizeStyle from 'Styles/Normalize';
+import GlobalStyle from 'Styles/Global';
+import theme from 'Theme';
+import ScholarshipDetails from 'Pages/ScholarshipDetails';
 
 
 function App() {
