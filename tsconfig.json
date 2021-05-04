@@ -25,6 +25,10 @@
       "@elements": ["./src/Elements"],
       "@pages/*": ["./src/Pages/*"],
       "@theme": ["./src/Theme"],
+      "@hooks": ["./src/Hooks"],
+      "@assets/*": ["./src/Assets/*"],
+      "@styles/*": ["./src/Styles/*"],
+      "@types/*": ["./src/Types/*"],
     }
   },
   "include": [
