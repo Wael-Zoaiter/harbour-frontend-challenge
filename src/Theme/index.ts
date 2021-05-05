@@ -1,8 +1,23 @@
 import { colors } from './colors';
 
+const devices = {
+  small: '576px',
+  mobile: '768px',
+  tablet: '992px',
+  desktop: '1200px',
+  large: '1400px',
+};
+
 const theme = {
+  media: {
+    small: '(max-width: 576px)',
+    mobile: '(max-width: 768px)',
+    tablet: '(max-width: 992px)',
+    desktop: '(max-width: 1200px)',
+    large: '(max-width: 1400px)',
+  },
   breakpoints: [
-    '40em', '52em', '64em',
+    devices.small, devices.mobile, devices.tablet, devices.desktop, devices.large,
   ],
   colors,
   space: [

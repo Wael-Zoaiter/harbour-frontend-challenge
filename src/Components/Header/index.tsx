@@ -1,13 +1,26 @@
+import { MenuIcon } from "Elements";
 import { FC } from "react";
+import { Flex, Box } from 'reflexbox';
+import { ApplyNowButton, HeaderWrapper, Logo, ScholarshipName } from "./Styles";
 
 type HeaderProps = {
- scholarshipName: string;
+ name: string;
 };
 
-const Header: FC<HeaderProps> = ({ scholarshipName }) => {
+const Header: FC<HeaderProps> = ({ name }) => {
   return (
-    <header className="header">
-    </header>
+    <HeaderWrapper>
+      <Flex alignItems="center" justifyContent="space-between" height="100%">
+        <Box display="flex" alignItems="center">
+          <Logo />
+          <ScholarshipName>/{name}</ScholarshipName>
+        </Box>
+        <Box>
+          <ApplyNowButton>Apply Now</ApplyNowButton>
+          <MenuIcon />
+        </Box>
+      </Flex>
+    </HeaderWrapper>
   );
 }
 
