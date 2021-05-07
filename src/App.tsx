@@ -12,6 +12,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <NormalizeStyle />
         <GlobalStyle />
+        {/* Pages */}
         <ScholarshipDetails />
       </ThemeProvider>
     </div>

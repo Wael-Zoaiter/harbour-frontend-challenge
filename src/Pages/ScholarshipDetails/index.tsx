@@ -2,6 +2,7 @@ import { SCHOLARSHIP_PAGE_URL } from 'Config';
 import { useFetch } from 'Hooks';
 import { ScholarshipPage } from 'Types';
 import ScholarshipDetails from './ScholarshipDetails';
+import { ScholarshipPageWrapper } from './Styles';
 
 function ScholarshipDetailsPage() {
   const { status, data, error } = useFetch<ScholarshipPage>(SCHOLARSHIP_PAGE_URL);
@@ -19,9 +20,9 @@ function ScholarshipDetailsPage() {
   };
 
   return (
-    <div className="scholarship-details-page">
+    <ScholarshipPageWrapper>
       {render()}
-    </div>
+    </ScholarshipPageWrapper>
   );
 }
 

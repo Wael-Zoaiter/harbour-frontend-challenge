@@ -51,7 +51,7 @@ export const ApplyNowButton = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  word-break: break-all;
+  word-break: break-word;
 
   @media ${({ theme }) => theme.media['small']} {
     display: none;

@@ -1,8 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<any>`
   body {
-    font-family: monospace;
+    font-family: 'Apercu Pro';
+    background-color: ${({ theme }) => theme.colors['white']};
+    color: ${({ theme }) => theme.colors['text']};
   }
 `;
 
