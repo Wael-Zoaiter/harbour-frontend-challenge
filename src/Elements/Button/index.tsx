@@ -1,14 +1,11 @@
-import { FC } from "react";
-import { ButtonStyled } from "./Styles";
+import styled from 'styled-components';
 
-type Props = {};
+const ButtonStyled = styled.button`
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+`;
 
-const Button: FC<Props> = ({ children, ...props }) => {
-  return (
-    <ButtonStyled {...props}>
-      {children}
-    </ButtonStyled>
-  );
-};
+const Button = ButtonStyled;
 
 export default Button;

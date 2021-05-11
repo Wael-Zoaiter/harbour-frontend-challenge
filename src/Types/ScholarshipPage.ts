@@ -26,6 +26,7 @@ export type Scholarship = {
   total_value: number,
   stipend_per_month: number,
   stipend_per_year: number,
+  remaining: number,
   study_commitment: number,
   internship_commitment: number,
   study_commitment_text: string,
