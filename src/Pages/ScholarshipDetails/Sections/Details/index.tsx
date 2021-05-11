@@ -8,8 +8,8 @@ import Time from './Time';
 const DetailsSection: FC<{ scholarship?: Scholarship }> = ({ scholarship }) => {
   return (
     <DetailsWrapper>
-      <Flex px={['180px']} py={['200px']} flexWrap="wrap">
-        <Box width={[1, 1, 1 / 3]} px="20px">
+      <Flex px={['20px', '20px', '180px']} py={['200px']} flexWrap="wrap">
+        <Box width={[1, 1, 1 / 3]} px={[0, 0, '20px']}>
           <Price
             totalValue={scholarship?.total_value}
             remaining={scholarship?.remaining}

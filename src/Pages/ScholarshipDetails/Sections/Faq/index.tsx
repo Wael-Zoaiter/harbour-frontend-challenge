@@ -8,7 +8,7 @@ import { FaqWrapper } from "./Styles"
 const FaqSection: FC<{ faqs?: FAQ }> = ({ faqs }) => {
   return (
     <FaqWrapper>
-      <Flex px={['200px']} pb={['200px']} flexWrap="wrap" alignItems="center">
+      <Flex px={['20px', '20px', '200px']} pb={['200px']} flexWrap="wrap" alignItems="center">
         <Box width={[1, 1 / 2]}>
           <Text
             color="primary"

@@ -7,7 +7,7 @@ import { AboutWrapper, ProgramImageWrapper } from './Styles';
 const AboutSection: FC<{ scholarship?: Scholarship }> = ({ scholarship }) => {
   return (
     <AboutWrapper>
-      <Flex px={['200px']} pt={['200px']} flexWrap="wrap">
+      <Flex px={['20px', '20px', '200px']} pt={['200px']} flexWrap="wrap">
         <Box width={[1, 1, 1 / 3]}>
           <ProgramImageWrapper>
             <Image
@@ -16,7 +16,7 @@ const AboutSection: FC<{ scholarship?: Scholarship }> = ({ scholarship }) => {
             />
           </ProgramImageWrapper>
         </Box>
-        <Box width={[1, 1, 2 / 3]} pl={['120px']}>
+        <Box width={[1, 1, 2 / 3]} pl={[0, 0, '120px']}>
           <Text
             color="primary"
             size={48}

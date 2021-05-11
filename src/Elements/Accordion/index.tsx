@@ -54,7 +54,7 @@ const AccordionWrapper = styled.div<{ active?: boolean }>`
 
     ${({ active }) => active
     ? css`
-      max-height: 700px;
+      max-height: 1000px;
       padding-top: 32px;
     `
     : css`

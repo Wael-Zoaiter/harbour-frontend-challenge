@@ -25,4 +25,19 @@ export const ProgramImageWrapper = styled.div`
     object-fit: cover;
     border-radius: 50%;
   }
+
+  @media ${({ theme }) => theme.media['mobile']} {
+    &::before {
+      height: 334px;
+      width: 334px;
+      top: -17px;
+      left: 0;
+    }
+
+    ${Image} {
+      height: 300px;
+      width: 300px;
+      margin: auto;
+    }
+  }
 `;

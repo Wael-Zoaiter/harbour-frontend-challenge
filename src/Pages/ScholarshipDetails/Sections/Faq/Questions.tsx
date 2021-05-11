@@ -15,7 +15,7 @@ const Questions: FC<Props> = ({ questions }) => {
         return (
           <QuestionWrapper key={`faq-question-${index}`}>
             <Flex py="32px" flexWrap="wrap">
-              <Box width={[0, 0, 1 / 3]}>
+              <Box width={[0, 0, 1 / 3]} display={['none', 'none', 'block']}>
                 <Text
                   color="primary"
                   size={22}
