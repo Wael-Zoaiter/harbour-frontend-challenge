@@ -1,4 +1,4 @@
-import { Accordion, Text, ToggleButton } from "Elements";
+import { Accordion, Text } from "Elements";
 import { FC } from "react";
 import { Box, Flex } from "reflexbox";
 import styled from "styled-components";
@@ -26,7 +26,6 @@ const Questions: FC<Props> = ({ questions }) => {
                 <Accordion
                   label={qs.question}
                   texts={qs.answer.map(an => an.data)}
-                  toggler={ToggleButton}
                   labelProps={{
                     size: 22,
                     weight: '500',

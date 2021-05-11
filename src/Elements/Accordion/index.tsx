@@ -1,7 +1,10 @@
-import { Text } from "Elements";
+import { ArrowDownIcon } from "Assets/images";
+import { Button, Text } from "Elements";
 import { TextProps } from "Elements/Text";
 import { FC, useState } from "react";
 import styled, { css } from "styled-components";
+
+type ToggleCompProps = { active?: boolean, onToggle: (active: boolean) => void };
 
 type Props = {
   label?: string;
@@ -9,7 +12,7 @@ type Props = {
   texts?: string[];
   textProps?: Partial<TextProps>;
   labelProps?: Partial<TextProps>;
-  toggler?: FC<{ active?: boolean, onToggle: (active: boolean) => void }>;
+  toggler?: FC<ToggleCompProps>;
 };
 
 const Accordion: FC<Props> = ({
@@ -18,7 +21,7 @@ const Accordion: FC<Props> = ({
   texts,
   textProps = {},
   labelProps = {},
-  toggler: Toggler,
+  toggler: Toggler = AccordionToggler,
 }) => {
   const [isActive, setIsActive] = useState<boolean>();
 
@@ -29,7 +32,7 @@ const Accordion: FC<Props> = ({
         {Toggler && (
           <Toggler
             active={isActive}
-            onToggle={setIsActive}
+            onToggle={active => setIsActive(active)}
           />
         )}
       </AccordionHeader>
@@ -68,6 +71,7 @@ const AccordionHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 `;
 
 const AccordionLabel = styled(Text)``;
@@ -77,3 +81,22 @@ const AccordionText = styled(Text)`
     margin-bottom: 0;
   }
 `;
+
+const DefaultToggler = styled(ArrowDownIcon)<{ active?: boolean }>`
+  position: absolute;
+  right: 0;
+  margin: auto;
+  transition: .5s ease-in-out transform;
+  ${({ active }) => active
+  ? css`
+    transform: rotateX(180deg);
+  ` : css`
+    transform: rotateX(0deg);
+  `}
+`;
+
+const AccordionToggler: FC<ToggleCompProps> = ({ active, onToggle }) => (
+  <Button onClick={() => onToggle?.(!active)}>
+    <DefaultToggler active={active} />
+  </Button>
+);
